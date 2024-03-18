@@ -59,6 +59,11 @@
 
 
 // Import required modules
+
+
+
+
+// Import required modules
 import express from "express";
 import bodyParser from "body-parser";
 
@@ -116,9 +121,9 @@ app.post('/bfhl', (req, res) => {
     }
 });
 
-// GET route for /bfhl (for example purposes)
-app.get('/bfhl', (req, res) => {
-    res.send('This is the GET endpoint for /bfhl');
+// GET route for / (root route)
+app.get('/', (req, res) => {
+    res.send('Welcome to the root route');
 });
 
 // Start the server
@@ -126,3 +131,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
