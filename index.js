@@ -123,7 +123,11 @@ app.post('/bfhl', (req, res) => {
 
 // GET route for / (root route)
 app.get('/', (req, res) => {
-    res.send('Welcome to the root route');
+    const status = {
+        "operation-code": 1
+    };
+    res.status(200);
+    res.json(status);
 });
 
 // Start the server
